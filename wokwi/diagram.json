@@ -24,7 +24,7 @@
     [ "esp:RX0", "$serialMonitor:TX", "", [] ],
     [ "ldr1:VCC", "esp:3V3", "red", [ "h0" ] ],
     [ "ldr1:GND", "esp:GND.1", "black", [ "h-38.4", "v-66.7" ] ],
-    [ "ldr1:DO", "esp:D2", "green", [ "h-28.8", "v-75.5" ] ]
+    [ "esp:D2", "ldr1:AO", "green", [ "h38.1", "v65.8" ] ]
   ],
   "dependencies": {}
 }
