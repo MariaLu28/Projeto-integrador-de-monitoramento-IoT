@@ -117,7 +117,7 @@ Também é necessário concluir a integração automática entre o ESP32 e o Sup
 
 ## Links do projeto
 
-- **Circuito no Wokwi:** 
+- **Circuito no Wokwi:** https://wokwi.com/projects/480982649599772673
 - **Repositório:**
 - **Supabase:** https://bzjjnpjaxamnvynuijae.supabase.co
 - **Frontend:** 
