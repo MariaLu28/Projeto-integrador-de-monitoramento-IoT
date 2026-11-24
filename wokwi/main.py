@@ -42,15 +42,15 @@ contador = 0
 
 sensores = [
     {
-        "id": "plantacao_1",
+        "id": "batata",
         "adc": ADC(Pin(32))
     },
     {
-        "id": "plantacao_2",
+        "id": "soja",
         "adc": ADC(Pin(33))
     },
     {
-        "id": "plantacao_3",
+        "id": "amendoim",
         "adc": ADC(Pin(34))
     }
 ]
