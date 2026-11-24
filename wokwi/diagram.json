@@ -13,29 +13,37 @@
     {
       "type": "wokwi-photoresistor-sensor",
       "id": "ldr1",
-      "top": 271.8,
-      "left": 113.2,
-      "rotate": 180,
+      "top": 310.4,
+      "left": -316,
       "attrs": {}
     },
     {
-      "type": "wokwi-rgb-led",
-      "id": "rgb1",
-      "top": 61.6,
-      "left": 97.1,
-      "attrs": { "common": "cathode" }
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr2",
+      "top": 396.8,
+      "left": -335.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr3",
+      "top": 224,
+      "left": -296.8,
+      "attrs": {}
     }
   ],
   "connections": [
     [ "esp:TX0", "$serialMonitor:RX", "", [] ],
     [ "esp:RX0", "$serialMonitor:TX", "", [] ],
-    [ "ldr1:VCC", "esp:3V3", "red", [ "h0" ] ],
-    [ "ldr1:GND", "esp:GND.1", "black", [ "h-38.4", "v-66.7" ] ],
-    [ "esp:D32", "ldr1:AO", "green", [ "h-19.2", "v134.3", "h182.4" ] ],
-    [ "rgb1:COM", "esp:GND.1", "black", [ "v0" ] ],
-    [ "rgb1:R", "esp:D19", "red", [ "v0" ] ],
-    [ "rgb1:G", "esp:D18", "green", [ "v0" ] ],
-    [ "rgb1:B", "esp:D5", "blue", [ "v0" ] ]
+    [ "ldr1:VCC", "esp:3V3", "red", [ "v144", "h125.1" ] ],
+    [ "ldr1:GND", "esp:GND.1", "black", [ "v143.6", "h125.1" ] ],
+    [ "ldr1:AO", "esp:D32", "green", [ "h76.8", "v-202.2" ] ],
+    [ "ldr2:VCC", "esp:3V3", "red", [ "v57.6", "h115.5" ] ],
+    [ "ldr2:GND", "esp:GND.1", "black", [ "v57.2", "h115.5" ] ],
+    [ "ldr2:AO", "esp:D33", "green", [ "h105.6", "v-279.1" ] ],
+    [ "ldr3:VCC", "esp:3V3", "red", [ "v230.4", "h173.1" ] ],
+    [ "ldr3:GND", "esp:GND.1", "black", [ "v230", "h173.1" ] ],
+    [ "ldr3:AO", "esp:D34", "green", [ "h48", "v-134.9" ] ]
   ],
   "dependencies": {}
 }
