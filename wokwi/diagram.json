@@ -13,22 +13,22 @@
     {
       "type": "wokwi-photoresistor-sensor",
       "id": "ldr1",
-      "top": 416,
-      "left": -344.8,
+      "top": 204.8,
+      "left": -335.2,
       "attrs": {}
     },
     {
       "type": "wokwi-photoresistor-sensor",
       "id": "ldr2",
-      "top": 214.4,
-      "left": -325.6,
+      "top": 339.2,
+      "left": -335.2,
       "attrs": {}
     },
     {
       "type": "wokwi-photoresistor-sensor",
       "id": "ldr3",
-      "top": 329.6,
-      "left": -344.8,
+      "top": 425.6,
+      "left": -335.2,
       "attrs": {}
     }
   ],
