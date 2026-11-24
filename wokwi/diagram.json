@@ -13,22 +13,22 @@
     {
       "type": "wokwi-photoresistor-sensor",
       "id": "ldr1",
-      "top": 310.4,
-      "left": -316,
+      "top": 416,
+      "left": -344.8,
       "attrs": {}
     },
     {
       "type": "wokwi-photoresistor-sensor",
       "id": "ldr2",
-      "top": 396.8,
-      "left": -335.2,
+      "top": 214.4,
+      "left": -325.6,
       "attrs": {}
     },
     {
       "type": "wokwi-photoresistor-sensor",
       "id": "ldr3",
-      "top": 224,
-      "left": -296.8,
+      "top": 329.6,
+      "left": -344.8,
       "attrs": {}
     }
   ],
@@ -41,8 +41,8 @@
     [ "ldr2:VCC", "esp:3V3", "red", [ "v57.6", "h115.5" ] ],
     [ "ldr2:GND", "esp:GND.1", "black", [ "v57.2", "h115.5" ] ],
     [ "ldr2:AO", "esp:D33", "green", [ "h105.6", "v-279.1" ] ],
-    [ "ldr3:VCC", "esp:3V3", "red", [ "v230.4", "h173.1" ] ],
-    [ "ldr3:GND", "esp:GND.1", "black", [ "v230", "h173.1" ] ],
+    [ "ldr3:VCC", "esp:3V3", "red", [ "v134.4", "h192.3" ] ],
+    [ "ldr3:GND", "esp:GND.1", "black", [ "v134", "h192.3" ] ],
     [ "ldr3:AO", "esp:D34", "green", [ "h48", "v-134.9" ] ]
   ],
   "dependencies": {}
