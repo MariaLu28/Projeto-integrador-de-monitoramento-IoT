@@ -6,9 +6,9 @@
     {
       "type": "wokwi-esp32-devkit-v1",
       "id": "esp",
-      "top": 91.1,
+      "top": 81.5,
       "left": -53,
-      "attrs": { "env": "micropython-20220618-v1.19.1" }
+      "attrs": { "env": "micropython-20230426-v1.20.0" }
     },
     {
       "type": "wokwi-photoresistor-sensor",
@@ -17,6 +17,13 @@
       "left": 113.2,
       "rotate": 180,
       "attrs": {}
+    },
+    {
+      "type": "wokwi-rgb-led",
+      "id": "rgb1",
+      "top": 61.6,
+      "left": 97.1,
+      "attrs": { "common": "cathode" }
     }
   ],
   "connections": [
@@ -24,7 +31,11 @@
     [ "esp:RX0", "$serialMonitor:TX", "", [] ],
     [ "ldr1:VCC", "esp:3V3", "red", [ "h0" ] ],
     [ "ldr1:GND", "esp:GND.1", "black", [ "h-38.4", "v-66.7" ] ],
-    [ "esp:D2", "ldr1:AO", "green", [ "h38.1", "v65.8" ] ]
+    [ "esp:D32", "ldr1:AO", "green", [ "h-19.2", "v134.3", "h182.4" ] ],
+    [ "rgb1:COM", "esp:GND.1", "black", [ "v0" ] ],
+    [ "rgb1:R", "esp:D19", "red", [ "v0" ] ],
+    [ "rgb1:G", "esp:D18", "green", [ "v0" ] ],
+    [ "rgb1:B", "esp:D5", "blue", [ "v0" ] ]
   ],
   "dependencies": {}
 }
