@@ -233,7 +233,7 @@ Também foi necessária a validação da integração automática entre o ESP32 
 - **API REST — hyper-action:** https://bzjjnpjaxamnvynuijae.supabase.co/functions/v1/hyper-action
 - **Frontend publicado:** https://patient-sun-9224.santosmariad16.workers.dev/
 - **Repositório GitHub:** inserir link do repositório.
-- **Vídeo de demonstração:** inserir link do vídeo.
+- **Vídeo de demonstração:** [inserir link do vídeo.](https://youtu.be/X3qp3pKRoR8)
 
 ## Integrantes
 
