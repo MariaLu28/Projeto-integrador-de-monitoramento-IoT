@@ -59,6 +59,7 @@ O projeto foi organizado em componentes responsáveis por cada etapa do funciona
 - Código da função `hyper-action`, responsável pelo recebimento e validação das requisições.
 - Script SQL responsável pela criação da tabela e das permissões do banco de dados.
 - Arquivos do frontend web.
+- Pasta com os dois certificados utilizados na configuração da conexão segura com o EMQX.
 
 ## Comunicação MQTT
 
@@ -94,6 +95,16 @@ O campo `sensor_id` identifica a cultura relacionada à leitura e aceita os segu
 - `amendoim`
 
 Cada leitura possui um identificador próprio, utilizado para diferenciar os registros e evitar duplicidade para o mesmo dispositivo.
+
+### Certificados da conexão MQTT
+
+Para estabelecer a conexão segura com o broker EMQX Cloud, foram utilizados dois certificados: um certificado base e outro gerado pelo próprio EMQX.
+
+Os dois arquivos foram organizados em uma pasta específica dentro do repositório, facilitando sua localização e utilização na configuração da comunicação MQTT.
+
+Durante a configuração da conexão, os certificados devem ser indicados conforme os parâmetros de segurança exigidos pelo broker e pela implementação do ESP32.
+
+**Atenção:** os certificados públicos podem ser disponibilizados conforme sua finalidade, mas chaves privadas, senhas e outras credenciais de acesso não devem ser publicadas no GitHub.
 
 ## API REST
 
@@ -143,7 +154,7 @@ Para reproduzir a estrutura do banco em um novo projeto Supabase:
 4. Conferir se a tabela foi criada com os campos e as restrições descritos anteriormente.
 5. Verificar se a política de consulta e as permissões foram configuradas corretamente.
 
-O script completo de criação do banco deve estar disponível no repositório, sem informações secretas.
+O script completo de criação do banco está disponível no repositório, sem informações secretas.
 
 ## Instruções para reprodução do projeto
 
@@ -160,10 +171,11 @@ O dispositivo utilizado foi identificado como `esp32_02`, e o tópico de publica
 
 1. Criar ou acessar um ambiente no EMQX Cloud.
 2. Configurar o acesso do dispositivo ao broker MQTT.
-3. Conferir o tópico utilizado para receber as mensagens.
-4. Criar a regra responsável por receber e interpretar o conteúdo JSON.
-5. Configurar a ação HTTP para encaminhar os dados à Edge Function do Supabase.
-6. Verificar os registros de recebimento e as respostas da ação HTTP.
+3. Utilizar os certificados disponibilizados na pasta específica do repositório para configurar a conexão segura.
+4. Conferir o tópico utilizado para receber as mensagens.
+5. Criar a regra responsável por receber e interpretar o conteúdo JSON.
+6. Configurar a ação HTTP para encaminhar os dados à Edge Function do Supabase.
+7. Verificar os registros de recebimento e as respostas da ação HTTP.
 
 A regra utilizou a função `json_decode` para interpretar a mensagem recebida. A ação HTTP utilizou o método POST e o endpoint da função `hyper-action`.
 
