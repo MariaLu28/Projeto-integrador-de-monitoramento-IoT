@@ -1,4 +1,6 @@
+
 begin;
+
 create table public.readings (
   device_id text not null
     check (device_id ~ '^[a-z0-9_-]{1,40}$'),
@@ -16,17 +18,17 @@ create table public.readings (
 
   constraint readings_sensor_id_check
     check (
-      sensor_id IS NULL OR
-      sensor_id IN (
-        'plantacao_1',
-        'plantacao_2',
-        'plantacao_3'
+      sensor_id is null or
+      sensor_id in (
+        'batata',
+        'soja',
+        'amendoim'
       )
     ),
 
   constraint readings_luminosity_check
     check (
-      luminosity >= 0 AND
+      luminosity >= 0 and
       luminosity <= 100000
     )
 );
@@ -51,4 +53,3 @@ create policy "synthetic_lab_public_read" on public.readings
   for select to anon, authenticated using (true);
 
 commit;
-
